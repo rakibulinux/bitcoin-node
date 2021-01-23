@@ -11,7 +11,8 @@
 
 # =============================================
 # Install bitcoind
-sudo apt-add-repository ppa:bitcoin/bitcoin -y
+sudo add-apt-repository ppa:luke-jr/bitcoincore
+sudo apt-get update
 sudo apt update && sudo apt install bitcoind -y
 
 # =============================================
