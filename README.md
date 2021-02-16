@@ -10,6 +10,15 @@ To setup a Bitcoin node on Ubuntu 18.04 follow these steps:
 chmod +x ./setup.sh && ./setup.sh <RPC-USERNAME> <RPC-PASSWORD>
 ```
 
+```
+bitcoind
+bitcoin-cli stop
+netstat -tnpl
+bitcoind --daemon
+bitcoin-cli getblockcount
+bitcoin-cli getblockchaininfo
+```
+
 ### Cheat Sheet: Parity Ethereum and Bitcoin Core:
 You can find some useful commands on the post below:
 
