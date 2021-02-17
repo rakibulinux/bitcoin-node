@@ -13,10 +13,11 @@ chmod +x ./setup.sh && ./setup.sh <RPC-USERNAME> <RPC-PASSWORD>
 ```
 bitcoind
 bitcoin-cli stop
-netstat -tnpl
 bitcoind --daemon
+netstat -tnpl
 bitcoin-cli getblockcount
 bitcoin-cli getblockchaininfo
+bitcoin-cli getconnectioncount
 ```
 
 ### Cheat Sheet: Parity Ethereum and Bitcoin Core:
