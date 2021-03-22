@@ -17,18 +17,18 @@ sudo apt update && sudo apt install bitcoind -y
 
 # =============================================
 # Setup additional volume
-sudo mkfs.ext4 /dev/xvdb #Format the volume to ext4 filesystem
+sudo mkfs.ext4 /dev/sda #Format the volume to ext4 filesystem
 sudo mkdir /btcdata #Create a directory to mount the new volume
-sudo mount /dev/xvdb /btcdata/ #Mount the volume to btcdata directory
+sudo mount /dev/sda /btcdata/ #Mount the volume to btcdata directory
 df -h /btcdata #Check the disk space to confirm the volume mount
 
 #EBS Automount on Reboot
 sudo cp /etc/fstab /etc/fstab.bak
-echo "/dev/xvdb  /btcdata/  ext4    defaults,nofail  0   0" | sudo tee -a /etc/fstab #Make a new entry in /etc/fstab
+echo "/dev/sda  /btcdata/  ext4    defaults,nofail  0   0" | sudo tee -a /etc/fstab #Make a new entry in /etc/fstab
 sudo mount -a #Check if the fstab file has any errors
 
 lsblk #List the available disks
-sudo file -s /dev/xvdb #Check if the volume has any data
+sudo file -s /dev/sda #Check if the volume has any data
 
 # =============================================
 RPCUSER=$1
