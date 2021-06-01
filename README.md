@@ -18,6 +18,7 @@ netstat -tnpl
 bitcoin-cli getblockcount
 bitcoin-cli getblockchaininfo
 bitcoin-cli getconnectioncount
+bitcoin-cli getnewaddress
 ```
 
 ### Cheat Sheet: Parity Ethereum and Bitcoin Core:
